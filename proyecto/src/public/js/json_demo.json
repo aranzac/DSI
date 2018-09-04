@@ -1,0 +1,36 @@
+[   {
+        "dia": "Lunes",
+        "primero":"Potaje",
+        "segundo":[
+            { "plato":"Paella", "guarnicion":" " }
+        ]
+    },
+    {
+        "dia": "Martes",
+        "primero":"Crema de verduras",
+        "segundo":[
+            { "plato":"Lentejas", "guarnicion":"Arroz" }
+        ]
+    },
+    {
+        "dia": "Miercoles",
+        "primero":"Ensalada",
+        "segundo":[
+            { "plato":"Albóndigas", "guarnicion":"Arroz" }
+        ]
+    },
+    {
+        "dia": "Jueves",
+        "primero":"Potaje",
+        "segundo":[
+            { "plato":"Bacalao", "guarnicion":"Papas" }
+        ]
+    },
+    {
+        "dia": "Viernes",
+        "primero":"Crema de verduras",
+        "segundo":[
+            { "plato":"Hamburguesa", "guarnicion":"Papas" }
+        ]
+    }
+]

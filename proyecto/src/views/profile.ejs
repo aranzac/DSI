@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <link rel="shortcut icon" href="https://goo.gl/gbgivT" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+        <link rel='shortcut icon' type='image/x-icon' href='img/birrete.png' />
+        <title>Área Personal</title>
+  </head>
+
+  <body>
+      <script src="js/scripts.js"></script>
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <div aria-label="Barra de navegación"class="header">
+        <div role="toolbar" class="navbar">
+          <a href="/">
+            <img alt="Logo" title="Inicio" src="img/logo5.png" tabindex="1" class="img-logo left" alt="logo"/>
+          </a>
+          <div class="topnav hide-on-med-and-down">
+            <a class="menu-3" title="Inicio" href="/" tabindex="2">Inicio</a>
+        <ul id = "dropdown" class = "drop-ul dropdown-content" role="menu">
+          <li class="drop"><a href = "/preinscripcion" tabindex="4" role="menuitem" aria-expanded="false">Preinscripción 18-19</a></li>
+          <li class="drop"><a href = "/horarios" tabindex="5" role="menuitem" aria-expanded="false">Horarios y Circulares</a></li>
+          <li class="drop"><a href = "/comedor" tabindex="6" role="menuitem" aria-expanded="false">Comedor<span></span></a></li>
+          <li class="drop"><a href = "/sobrenosotros" tabindex="7" role="menuitem" aria-expanded="false">Sobre nosotros</a></li>
+        </ul>
+
+        <a class = "dropdown-button menu-1" href = "#" data-activates = "dropdown" tabindex="3" aria-expanded="true">Información
+              <a class="inactive menu-1" title="Contacto" href="/contacto" tabindex="8">Contacto</a>
+              <a title="Inicio de Sesión" href="/login" class="right menu-2 cuadrado" tabindex="10">Iniciar Sesión</a>
+              <a title="Registro" href="/formulario" class="right menu-2 cuadrado lil-espacio-right" tabindex="9">Registrarse</a>
+          </div>
+        </div>
+      </div>
+
+          <h1 class="h1-titulo center-align"> Bienvenido/a, <%= user.local.nombre %> <br>
+          <h2 class="h2-cuerpo center-align">Aquí encontrarás tus datos.</h2>
+
+          <div class="cuadro-datos">
+            <div class="center-align">
+              <img src="img/user.png" alt="Icono de usuario" class="img-user">
+            </div>
+            <div class="center-align">
+              <table class="tabla-datos" role="grid">
+                <tr role="row">
+                  <th>Nombre</th>
+                  <td  class="right-align">
+                    <%= user.local.nombre %>
+                  </td>
+                </tr>
+                <tr role="row">
+                  <th>Apellidos</th>
+                  <td  class="right-align">
+                    <%= user.local.apellido %>
+                  </td>
+                </tr>
+                <tr role="row">
+                  <th>DNI</th>
+                  <td  class="right-align">
+                    <%= user.local.dni %>
+                  </td>
+                </tr>
+                <tr role="row">
+                  <th>Correo:</th>
+                    <td  class="right-align">
+                      <%= user.local.email %>
+                    </td>
+                  </tr>
+                <tr role="row">
+                  <th>Nota: </th>
+                  <td  class="right-align">
+                    <%= user.local.media %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <a href="/logout" class="center-align btn btn-light btn-sm">
+            Logout
+          </a>
+    </body>
+
+  <footer>
+    <div class="pie">
+      <p class="copyright"> <b>© 2018 Copyright </b></p>
+        <div class="pie-redes inline right">
+          <i class="fa fa-envelope"></i>
+          <a class="letra-blanca"> colegio.uya@2018.com</a>
+        </div>
+    </div>
+  </footer>
+
+</html>

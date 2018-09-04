@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Colegio - Inicio</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+		<link rel='shortcut icon' type='image/x-icon' href='img/birrete.png' />
+	</head>
+
+		<body>
+			<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+			<script src="js/jquery-3.3.1.min.js"></script>
+			<script src="js/scripts.js"> </script>
+	    <div aria-label="Barra de navegación" class="header">
+	      <div role="toolbar" class="navbar">
+	        <a href="/">
+	          <img alt="Logo" title="Inicio" src="img/logo5.png" tabindex="1" class="img-logo left" alt="logo"/>
+	        </a>
+	        <div class="topnav hide-on-med-and-down">
+	          <a class="menu-3" title="Inicio" href="/" tabindex="2">Inicio</a>
+	      <ul id = "dropdown" class = "drop-ul dropdown-content" role="menu">
+	        <li class="drop"><a href = "/comedor" tabindex="4" role="menuitem" aria-expanded="false">Comedor<span></span></a></li>
+	        <li class="drop"><a href = "/horarios" tabindex="5" role="menuitem" aria-expanded="false">Horarios y Circulares</a></li>
+	        <li class="drop"><a href = "/preinscripcion" tabindex="6" role="menuitem" aria-expanded="false">Preinscripción 18-19</a></li>
+	        <li class="drop"><a href = "/sobrenosotros" tabindex="7" role="menuitem" aria-expanded="false">Sobre nosotros</a></li>
+	      </ul>
+
+	        <a class = " menu-active dropdown-button menu-1" href = "#" data-activates="dropdown"  aria-expanded="true" tabindex="3" aria-expanded="true">Colegio &nbsp; ▼</a>
+	        <a class="inactive menu-1" title="Contacto" href="/contacto" tabindex="8">Contacto</a>
+	        <a title="Inicio de Sesión" href="/login" class="right menu-2 cuadrado" tabindex="10">Iniciar Sesión</a>
+	        <a title="Registro" href="/signup" class="right menu-2 cuadrado lil-espacio-right" tabindex="9">Registrarse</a>
+	        </div>
+	      </div>
+	    </div>
+			<div aria-label="Cuerpo" class="cuerpo-princi">
+	      <h1 class="h1-titulo centrado">Comedor</h1>
+	      <h2 class="h2-cuerpo centrado">Selecciona el día de la semana que quieres consultar.</h2>
+	      <div class="center-align">
+	        <div aria-label="Info comedor" class="justificado">
+	          <h2 class="h2-subtitulo"><b>Días:</b> De <u>Lunes</u> a <u>Viernes</u></h2>
+	          <h2 class="h2-subtitulo"><b>Horario:</b>  <u>De 12:30</u> a <u>15:30</u></h2>
+	          <h2 class="h2-subtitulo"><b>Nº Teléfono: </b> &nbsp 732-466-7854</h2>
+	          <h2 class="h2-subtitulo inline"><b>Consultar Menú:</b></h2>
+	          <div class="input-field inline">
+	            <select id="selector" rol="listbox" class="browser-default select1" onchange="enviar_seleccion(this.value)">
+	              <option  aria-labelledby="selector" value="" disabled selected tabindex="11" id="elig">Elige un día</option>
+	              <option tabindex="12" aria-labelledby="selector" value="0">Lunes</option>
+	              <option tabindex="13" aria-labelledby="selector" value="1">Martes</option>
+	              <option tabindex="14" aria-labelledby="selector" value="2">Miércoles</option>
+	              <option tabindex="15" aria-labelledby="selector" value="3">Jueves</option>
+	              <option tabindex="16" aria-labelledby="selector" value="4">Viernes</option>
+	            </select>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	  <div style="overflow-x:auto;" class="cuerpo3">
+	    <h2 class="h2-cuerpo centrado"><p class="inline">&#8595;</p>Se mostrará aquí debajo el menú del día seleccionado<p class="inline">   &#8595;</p></h2>
+
+
+	    <table class="tabla1 centered striped" role="grid">
+	      <thread>
+	        <tr role="row">
+	          <th class="tablita">Día</th>
+	          <th class="tablita">Primer Plato</th>
+	          <th class="tablita" colspan="2">Segundo Plato</th>
+	        </tr>
+	      </thread>
+
+	      <tbody>
+	        <tr role="row">
+	          <td colspan="2" role="gridcell"></td>
+	          <td class="tablita" role="gridcell"><b>Plato</b></td>
+	          <td class="tablita" role="gridcell"><b>Guarnición</b></td>
+	        </tr>
+	        <tr role="row">
+	          <td class="tablita" id="dia" role="gridcell"></td>
+	          <td class="tablita" id="primero" role="gridcell"></td>
+	          <td class="tablita" id="segundo-plato" role="gridcell"></td>
+	          <td class="tablita" id="segundo-guarnicion" role="gridcell"></td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div>
+
+<footer>
+	<div class="pie" >
+		<p class="copyright"> <b>© 2018 Copyright </b></p>
+			<div class="pie-redes inline right">
+				<i class="fa fa-envelope"></i>
+				<a class="letra-blanca"> colegio.uya@2018.com</a>
+			</div>
+	</div>
+</footer>
+
+
+	</body>
+</html>

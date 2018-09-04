@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Registro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel='shortcut icon' type='image/x-icon' href='img/birrete.png' />
+  </head>
+
+  <body>
+    <script src="js/scripts.js"> </script>
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+    <div aria-label="Barra de navegación" class="header">
+      <div role="toolbar" class="navbar">
+        <a href="/">
+          <img alt="Logo" title="Inicio" src="img/logo5.png" tabindex="1" class="img-logo left" alt="logo"/>
+        </a>
+        <div class="topnav hide-on-med-and-down">
+          <a class="menu-3" title="Inicio" href="/" tabindex="2">Inicio</a>
+      <ul id = "dropdown" class = "drop-ul dropdown-content" role="menu">
+        <li class="drop"><a href = "/comedor" tabindex="4" role="menuitem" aria-expanded="false">Comedor<span></span></a></li>
+        <li class="drop"><a href = "/horariosycirculares" tabindex="5" role="menuitem" aria-expanded="false">Horarios y Circulares</a></li>
+        <li class="drop"><a href = "/preinscripcion" tabindex="6" role="menuitem" aria-expanded="false">Preinscripción 18-19</a></li>
+        <li class="drop"><a href = "/sobrenosotros" tabindex="7" role="menuitem" aria-expanded="false">Sobre nosotros</a></li>
+      </ul>
+
+        <a class = "dropdown-button menu-1" href = "#" data-activates="dropdown"  aria-expanded="true" tabindex="3" aria-expanded="true">Colegio &nbsp; ▼</a>
+        <a class=" menu-1" title="Contacto" href="/contacto" tabindex="8">Contacto</a>
+        <a title="Inicio de Sesión" href="/login" class="right menu-2 cuadrado" tabindex="10">Iniciar Sesión</a>
+        <a title="Registro" href="/registro" class="right menu-2 cuadrado lil-espacio-right menu-active" tabindex="9">Registrarse</a>
+        </div>
+      </div>
+    </div>
+
+    <div aria-label="Cuerpo" class=" cuerpo-princi center-align">
+      <h1 class="h1-titulo center-align">Registro</h1>
+      <h2 class="h2-cuerpo">Introduce tus datos para registrarte en el colegio</h2>
+
+      <div class="row">
+        <div aria-label="Formulario" class="cuadro-form">
+          <form id="form1" name="Formulario registro" class="right-alert" action="/signup" method="post" onsubmit="run(nombre.value, apellido.value, media.value)">
+                   <div class="input-field">
+                          <input name ="nombre" id="nombre" type="text" class="validate" tabindex="10"  aria-required="true" oninput="comprobar_nombre(nombre)" required>
+                          <label class="etiqueta-form2" for="nombre">Nombre</label>
+                          <p id="mensaje"></p>
+                    </div>
+                    <div class="input-field">
+                          <input name="apellido" id="apellido" type="text" class="validate" tabindex="11"  aria-required="true" oninput="comprobar_apellido()" required>
+                          <label class="etiqueta-form2" for="apellido">Apellidos</label>
+                    </div>
+                    <div class="input-field">
+                          <input name ="dni" id="dni" type="text" class="validate" tabindex="12" aria-required="true" oninput="comprobar_dni()" required>
+                          <label class="etiqueta-form2" for="dni">D.N.I.</label>
+                    </div>
+
+                    <div class="input-field" tabindex="">
+                          <input name ="email" id="mail" type="email" class="validate" tabindex="13" aria-required="true" oninput="comprobar_correo()" required>
+                          <label class="etiqueta-form2" for="email">Correo electrónico</label>
+                    </div>
+                    <div class="input-field">
+                         <input name="password" id="password" type="password" class="validate" tabindex="14" aria-required="true" oninput="comprobar_contrasena()" required>
+                         <label class="etiqueta-form2" for="password">Contraseña</label>
+                    </div>
+                    <div class="input-field">
+                         <input name="media" id="media" type="number" step="0.01" min="0" max="10" class="validate" tabindex="15" aria-required="true" required>
+                         <label class="etiqueta-form2" for="media">Nota media</label>
+                    </div>
+                    <button id="boton" name="Botón de Registro" alt="Registro" value="Datos_registro" role="button" type="submit" class="btn waves-effect boton-form"  tabindex="16" aria-required="true" required>Registrarse</button>
+                </form>
+            </div>
+        </div>
+      </div>
+
+      <footer>
+      <div class="pie">
+        <p class="copyright"> <b>© 2018 Copyright </b></p>
+          <div class="pie-redes inline right">
+            <i class="fa fa-envelope"></i>
+            <a class="letra-blanca"> colegio.uya@2018.com</a>
+          </div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

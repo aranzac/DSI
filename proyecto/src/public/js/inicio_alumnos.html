@@ -1,0 +1,125 @@
+ 
+ <!DOCTYPE>
+<html lang="es">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!--Cabecera-->
+        <div>
+          <div class="cabecerito">
+            <i class="fa fa-phone-square"></i>
+            <a class="letra-blanca">732-466-7854</a>
+            <i class="fa fa-envelope"></i>
+            <a class="letra-blanca"> holaquetal@quepaso.com </a>
+          </div>
+        <h1 title="Colegio Bonito" class="titulo"><a class="vacio" href="index.html">COLEGIO BONITO</a></h1>
+        </div>
+        
+          <!--Barra de navegacion-->
+         <nav>
+            <div role="toolbar" class="nav-wrapper" class="center">
+              <ul role="toolbar" id="nav-mobile" class="left">
+                <li><a href="index.html" onclick="toggle()">Inicio</a></li>
+                <li><a href="centro.html">Centro</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+              <ul id="nav-mobile" class="right">
+                <li><a href="formulario.html">Registrarse</a></li>
+                <li><a href="javascript:void(0)" class="dropbtn">Iniciar Sesión</a>
+                
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+                
+                </li>
+                <li>
+                  <div id="myDIV" class="barra-busqueda">
+                  <input class="input input-busqueda" placeholder="Búsqueda..." onfocus="this.placeholder = ''">
+                  </div>
+    		          <a onclick="clickSearch()" class="fa fa-search"></a>
+                </li>
+              </ul>
+              <div id="et-secondary-menu">
+    				    <div class="et_duplicate_social_icons">
+    						  <ul class="right hide-on-right-and-down">
+    				        <li class="et-social-icon et-social-facebook">
+    		              <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    	              </li>
+        	          <li class="et-social-icon et-social-twitter">
+        		          <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        	          </li>
+        	        </ul>
+                </div>
+             </div>
+            </div>
+        </nav>
+    </head>
+ 
+ <div class="cuerpo3">
+        
+        <h2>Área Personal</h2>
+        <h3>Inicie sesión para acceder a</h3>
+        <div class="row">
+        <form class="col" style="margin-left: 80px">
+          <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input style="margin-left: 180px" id="Correo" type="email" class="validate" aria-required="true" required="required" onchange="validar_email(this.value)">
+              <label for="Corrreo">Correo electrónico</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input style="margin-left: 180px" id="DNI" type="text" class="validate" aria-required="true" required="required" onchange="validar_DNI(this.value)">
+              <label for="Corrreo">DNI</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input style="margin-left: 180px" id="Contraseña" type="password" aria-required="true" class="validate" required="required">
+              <label for="Contraseña">Contraseña</label>
+              <input type="checkbox" class="filled-in" onclick="mostrar_pass()">Mostrar contraseña
+        
+            </div>
+          </div>
+          <a class="waves-effect waves-light btn" style="margin-left: 340px">Regístrate</a>
+        </form>
+        
+        <script>
+        </script>
+        
+      </div>
+    </div>
+    
+    
+    <script>
+        function mostrar_pass() {
+          var x = document.getElementById("Contraseña");
+          if (x.type === "password") {
+              x.type = "text";
+          } else {
+              x.type = "password";
+          }
+        }
+    </script>
+
+  </body>
+  
+    <footer>
+        <p class="copyright"> <b>© 2018 Copyright </b>  Alba Cruz, Daniel Abréu, Aranza Cabrera</p>
+    </footer>
+    
+</html>
